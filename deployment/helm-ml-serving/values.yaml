@@ -1,0 +1,12 @@
+replicaCount: 1
+app:
+  namespace: model-serving
+  env: dev
+image:
+  repository: mlwebservice 
+  tag: 0.0.1
+  pullPolicy: IfNotPresent
+service:
+  portName: flask-api
+  port: 5000
+  containerPort: 5000 
