@@ -3,7 +3,7 @@ FROM python:3.9-slim
 EXPOSE 5000
 
 RUN mkdir /app
-COPY api.py requirements.txt /app
+COPY config.yaml api.py ml_model.sav requirements.txt /app/
 WORKDIR /app
 RUN pip install -r requirements.txt
 

@@ -3,7 +3,7 @@ app:
   namespace: model-serving
   env: dev
 image:
-  repository: mlwebservice 
+  repository: edlongbottom/mlwebservice/titanic 
   tag: 0.0.1
   pullPolicy: IfNotPresent
 service:

@@ -1,0 +1,3 @@
+DOCKER_REGISTRY: edlongbottom/mlwebservice
+SERVICE_NAME: titanic
+API_VERSION: 0.0.1
