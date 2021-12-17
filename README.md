@@ -7,7 +7,7 @@ The deployment scripts have been designed to be transferrable for use in other p
 The Titanic classification dataset from Kaggle is used as a simple use case to demonstrate the workflow. 
 
 
-## Experimentation
+### Experimentation
 
 This folder contains the datasets, model repository and jupyter notebooks used during the project experimentation phase. 
  - datasets: train and test data from Kaggle in CSV files
@@ -17,7 +17,7 @@ This folder contains the datasets, model repository and jupyter notebooks used d
 A requirements.txt file in this folder lists the python packages required to run the notebooks.
 
 
-## Deployment
+### Deployment
 
 This folder contains the scripts required to deploy a machine learning model as a RESTful prediction web service to a kubernetes instance. Flask is used to create a simple REST API wrapper for the latest ML model produced during Experimentation. A Dockerfile and Helm chart are then used for the automated deployment and exposure of the model as a prediction web service on Kubernetes. 
 
