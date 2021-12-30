@@ -14,7 +14,7 @@ This folder contains the datasets, model repository and jupyter notebooks used d
  - models: a folder for storing ML model *.pkl files
  - notebooks: Jupyter notebooks documenting approaches for EDA and model development, training and evaluation
 
-A requirements.txt file in this folder lists the python packages required to run the notebooks.
+A *requirements.txt* file in this folder lists the python packages required to run the notebooks.
 
 
 ### Deployment
@@ -23,4 +23,4 @@ This folder contains the scripts required to deploy a machine learning model as 
 
 The deployment-k8s.ipynb Jupyter notebook outlines the steps for the deployment.
 
-A requirements.txt file in this folder lists the python packages required to run the prediction web service.
+A *requirements.txt* file in this folder lists the python packages required to run the prediction web service.
