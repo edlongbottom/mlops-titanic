@@ -1,0 +1,8 @@
+apiVersion: v2
+name: mlwebservice-titanic
+description: Helm chart for deploying ML model web service for titanic classifier to Kubernetes
+keywords:
+  - mlwebservice
+type: application
+appVersion: 0.0.1
+version: 0.1.0
