@@ -1,7 +1,7 @@
 import requests, json, time
 
 # define base URL (localhost + flask port)
-url = "http://127.0.0.1:5000/titanic/v0.0.1/predict"
+url = "http://127.0.0.1:65169/titanic/v0.0.1/predict"
 headers = {"Content-Type": "application/json"}
 body = {'PassengerId':[892],'Pclass':[3],'Name':['Kelly, Mr. James'],'Sex':['male'],
         'Age':[34.5],'SibSp':[0],'Fare':[7.8292],'Embarked':['S']}

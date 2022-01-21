@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  __init__.py: '# -*- coding: utf-8 -*-'
+  Example_functions.py: ""
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-01-21T05:54:01Z"
+  name: my-loadtest-lib
+  namespace: model-serving
+  resourceVersion: "10235"
+  uid: f437e987-7a1e-428a-8bdc-27bba290efd7

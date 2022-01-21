@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  main.py: "from locust import HttpUser, task, constant\r\n\r\nclass LoadTest(HttpUser):\r\n
+    \   wait_time = constant(0)\r\n    host = \"http://10.100.244.233\"\r\n\r\n    @task\r\n
+    \   def predict(self):\r\n        request_body = {\r\n            'PassengerId':[892],\r\n
+    \           'Pclass':[3],\r\n            'Name':['Kelly, Mr. James'],\r\n            'Sex':['male'],\r\n
+    \           'Age':[34.5],\r\n            'SibSp':[0],\r\n            'Fare':[7.8292],\r\n
+    \           'Embarked':['S']\r\n        }\r\n\r\n        self.client.post(\r\n
+    \           \"http://10.100.244.233:5000/titanic/v0.0.1/predict\", json=request_body\r\n
+    \       )\r\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-01-21T05:54:01Z"
+  name: my-loadtest-locustfile
+  namespace: model-serving
+  resourceVersion: "10234"
+  uid: 847f2597-124c-4765-8c22-93f78cfd3580
