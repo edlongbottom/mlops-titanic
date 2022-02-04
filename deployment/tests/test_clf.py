@@ -3,10 +3,12 @@ import numpy as np
 from numpy import ndarray, int64
 from sklearn.pipeline import Pipeline
 from sklearn.compose._column_transformer import ColumnTransformer
+import joblib
+import os, glob
 
-import os
 os.chdir('..')
-from api import model
+print(os.getcwd())
+model = joblib.load(glob.glob('*.pkl')[0])
 
 def test_accuracy():
     ''' Test model accuracy by scoring it on a sample of the training data'''
