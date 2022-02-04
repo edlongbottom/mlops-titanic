@@ -1,0 +1,41 @@
+# Run unit tests for your Python application
+name: Titanic-unit-tests
+
+# Controls when the action will run. 
+# Triggers the workflow on push request events only when there are changes in the desired path
+on:
+  push:
+    paths:
+      - 'deployment/**'
+
+# Defines the job to be run.
+# specify the type of runner (ubuntu), shell and the working directory
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: deployment/
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    # checkout the repo, use Python, install pip and any dependencies, and run a test using Pytest 
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      - 
+        name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.6'
+      - 
+        name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      -
+        name: Test with pytest
+        run: |
+          cd tests/
+          pytest
